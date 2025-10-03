@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "time": "00:00",
+  "timezone": "UTC",
+  "platforms": ["instagram", "twitter", "linkedin"],
+  "content_strategy": {
+    "default_tone": "professional",
+    "include_hashtags": true,
+    "max_hashtags": 5,
+    "image_generation": true
+  },
+  "safety_settings": {
+    "duplicate_check": true,
+    "content_moderation": true,
+    "max_daily_posts": 3
+  }
+}
