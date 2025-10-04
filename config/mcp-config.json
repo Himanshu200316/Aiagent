@@ -1,0 +1,38 @@
+{
+  "name": "social-media-agent",
+  "version": "1.0.0",
+  "description": "MCP modules for social media posting",
+  "modules": {
+    "instagram": {
+      "path": "/app/modules/instagram_module.py",
+      "description": "Instagram posting and story management",
+      "capabilities": ["post_feed", "post_story", "get_account_info"]
+    },
+    "twitter": {
+      "path": "/app/modules/twitter_module.py", 
+      "description": "Twitter/X posting and management",
+      "capabilities": ["post_tweet", "upload_media", "get_account_info"]
+    },
+    "linkedin": {
+      "path": "/app/modules/linkedin_module.py",
+      "description": "LinkedIn posting and management", 
+      "capabilities": ["post_update", "upload_image", "get_profile_info"]
+    }
+  },
+  "settings": {
+    "max_retries": 3,
+    "timeout": 30,
+    "rate_limiting": {
+      "instagram": {
+        "posts_per_hour": 5,
+        "stories_per_hour": 10
+      },
+      "twitter": {
+        "tweets_per_hour": 50
+      },
+      "linkedin": {
+        "posts_per_hour": 10
+      }
+    }
+  }
+}
